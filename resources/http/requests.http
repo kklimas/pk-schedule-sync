@@ -1,0 +1,11 @@
+### Trigger sync manually
+POST http://localhost:8000/api/v1/jobs HTTP/1.1
+content-type: application/json
+
+### Find paged jobs 
+GET http://localhost:8000/api/v1/jobs?page=1&size=5 HTTP/1.1
+content-type: application/json
+
+### Find paged lectures 
+GET http://localhost:8000/api/v1/lectures/?page=1&size=20 HTTP/1.1
+content-type: application/json

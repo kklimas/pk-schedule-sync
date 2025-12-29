@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+sqlalchemy
+requests
+beautifulsoup4
+python-dotenv
+httpx
+pandas
+openpyxl
+xlrd
+apscheduler
+slack-sdk
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
+tzdata
+gunicorn

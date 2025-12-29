@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PK Schedule Sync | Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>PK Schedule Sync</h1>
+                <p style="font-size: 0.8rem; color: var(--text-muted);">Smart Schedule Automation</p>
+            </div>
+            <div class="actions">
+                <button id="syncNowBtn" class="btn btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 4v6h-6"></path><path d="M1 20v-6h6"></path><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+                    Sync Now
+                </button>
+            </div>
+        </header>
+
+        <div class="grid">
+            <main>
+                <h2 class="section-title">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    Upcoming Lectures
+                </h2>
+                <div id="lectureList" class="lecture-list">
+                    <!-- Lectures will be loaded here -->
+                    <div class="card" style="text-align: center; color: var(--text-muted);">Loading lectures...</div>
+                </div>
+                <div class="pagination" style="margin-top: 1rem; display: flex; gap: 1rem; justify-content: center;">
+                    <button id="prevPage" class="btn btn-secondary" style="border: 1px solid var(--glass-border);">Previous</button>
+                    <span id="pageInfo" style="display: flex; align-items: center; font-size: 0.9rem;">Page 1</span>
+                    <button id="nextPage" class="btn btn-secondary" style="border: 1px solid var(--glass-border);">Next</button>
+                </div>
+            </main>
+
+            <aside>
+                <h2 class="section-title">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg>
+                    Sync History
+                </h2>
+                <div id="jobList" class="job-list">
+                    <!-- Jobs will be loaded here -->
+                    <div class="card" style="text-align: center; color: var(--text-muted);">Loading sync history...</div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

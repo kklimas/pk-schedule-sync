@@ -1,0 +1,11 @@
+services:
+  app:
+    image: pk-schedule-sync:1.0.0
+    container_name: pk-schedule-sync
+    ports:
+      - "8000:8000"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
+    environment:
+      - SYNC_SCHEDULE=0 */6 * * *
